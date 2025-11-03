@@ -1,0 +1,462 @@
+/* Import font at the top if not already in HTML */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* General reset */
+/* TEMPORARY: force-disable any inherited/ancestor text-decoration (for debugging) */
+*,
+*::before,
+*::after {
+  text-decoration: none !important;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply the font to the entire site */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff;
+    color: #222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85)
+}
+/*Transition */
+
+a, .btn {
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links a {
+    text-decoration: none;        /* removes the underline */
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;   /* smooth hover effect */
+}
+
+.nav-links a:hover {
+    color: grey;            /* change color on hover */
+    transform: translateY(-2px); /* slight lift effect */
+    text-decoration: underline;
+    text-underline-offset: .5rem; /*space between item and underline*/
+    text-decoration-color: rgb(181, 181, 181); /*make underline also go grey on hover*/
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+  display: none; /* hidden on large screens */
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a:hover {
+    color: grey;
+    transform: translateY(-2px);
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform:rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+    transform:rotate(-45deg) translate(10px, 5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity:1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-left: 5rem;
+}
+
+.profile-pic {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.intro-text {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-text h2 {
+  font-weight: 400;
+  color: #555;
+}
+
+.oval-icon {
+  width: 100px;
+  height: 30px;
+  background-color: #f0f0f0; 
+  border-radius: 50%; /* Creating the oval shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+h4 {
+    font-size: 10px;
+}
+
+.oval-icon2 {
+  width: 100px; 
+  height: 30px;
+  background-color: #f0f0f0; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ovals {
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transform: translateY(-2px);
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+    text-decoration-color: black;
+}
+
+.oval-icon:hover {
+    color: grey;
+    transform: translateY(-2px);
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.oval-icon2:hover {
+    color: grey;
+    transform: translateY(-2px);
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.social-links {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+i {
+  font-size: 2rem;
+  color: #333;
+}
+i:hover {
+  color: #007bff;
+}
+
+.middle-content {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;    /* align items at the top horizontally */
+  gap: 40px;
+  flex-wrap: wrap;            /* stacks nicely on mobile */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-me {
+  flex: 1;                    /* takes remaining space on the right */
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;     /* stack image and boxes vertically */
+  align-items: center;
+  gap: 20px;
+}
+
+.content-pic {
+  height: 500px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.detail-containers {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163,163,163);
+  text-align: center;
+}
+
+.about-containers {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*Experience Section*/
+
+#experience {
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.experience-sub-title {
+  color: rgb(85,85,85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: row;
+  text-align: initial;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+.article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* Font-weight utility classes */
+.poppins-light {
+    font-weight: 300;
+}
+.poppins-regular {
+    font-weight: 400;
+}
+.poppins-medium {
+    font-weight: 500;
+}
+.poppins-semibold {
+    font-weight: 600;
+}
+
+/* Show desktop nav by default */
+#desktop-nav {
+  display: flex;
+}
+
+/* Hide hamburger nav by default */
+#hamburger-nav {
+  display: none;
+}
+
+/* FOOTER*/
+
+footer {
+  justify-items: center;
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* When screen ≤800px */
+@media (max-width: 800px) {
+  
+  .top-content {
+    padding-top: 130px;
+  }
+  
+  #desktop-nav {
+    display: none; /* hide desktop version */
+  }
+
+  .boxes {
+    justify-items: center;
+    margin-left: 2rem;
+  }
+
+  #hamburger-nav {
+    display: flex; /* show mobile version */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;    /* stay at top */
+    top: 0;
+    height: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;         /* keep it above other content */
+  }
+
+  .hamburger-menu:hover {
+    transform: translateY(-2px);
+  }
+}
+
+

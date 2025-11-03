@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Link to your CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Bryan Anderson</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo2">Portfolio</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links" onclick="toggleMenu()">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>  
+            </div>
+        </div>
+    </nav>
+    <script src="/js/main.js"></script>
+    <div class="top-content">
+        <img class="profile-pic" src="Images/Me.JPEG" alt="Bryan Anderson">
+
+        <div class="intro-text">
+            <h2>Hello, I'm</h2>
+            <h1>Bryan Anderson</h1>
+            <h2>Full-Stack Web Developer</h2>
+            <div class="ovals">
+                <a href="Assets/Bryan_Anderson_Resume.pdf" download><div class="oval-icon"><h4>Download CV</h4></div></a>
+                <div class="oval-icon2"><a href="https://linkedin.com/in/bryanpanderson" style="color: black; text-decoration: none;"><h4>Contact Info</h4></a></div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/BryanPAnderson"><i class="fa-brands fa-github"></i></a></i>
+                <a href="https://www.linkedin.com/in/bryanpanderson/"><i class="fa-brands fa-linkedin"></i></a></i>
+            </div>    
+        </div>
+    </div>
+    <section id="about">
+    <div class="middle-content">
+        <p>Get To Know More</p>
+        <h1 style="margin-bottom: 5rem; font-size: 60px;">About Me</h1>
+        <div class="section-container">
+            <img class="content-pic" src="/Images/code.jpg" alt="Coding workspace">
+            <div class="container">
+                <div class="boxes">
+                    <div class="box">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <h4>Education</h4>
+                        <a href="Assets/Lambda School Certificate of Completion - Bryan Anderson.pdf" download class="button">
+                            <h2>Certification</h2>
+                        </a>
+                        <p>(Download)</p>
+                    </div>
+                    <div class="box">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <h4>Experience</h4>
+                        <a href="#experience" class="button">
+                            <h2>Experience</h2>
+                        </button>
+                    </div>
+                </div>
+                <p class="about-me">
+                    I’m a Junior Web Developer with hands-on experience building responsive, user-friendly websites using 
+                    JavaScript, HTML, CSS, and Node.js. I recently earned my Full Stack Web Development Certificate from 
+                    Bloom Institute of Technology, where I developed multiple projects that combined front-end design and 
+                    back-end functionality. I’m passionate about writing clean, efficient code and turning ideas into real-world 
+                    web applications. With a strong foundation in front-end frameworks, APIs, and Git version control, I enjoy 
+                    solving problems, learning new technologies, and collaborating on meaningful projects.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    </section>
+    <section id="experience">
+        <p class="title">Explore My</p>
+        <h1 style="margin-bottom: 5rem; font-size: 60px; text-align: center;">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="detail-containers">
+                    <h2 class="experience-sub-title">Frontend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <i class="fa-solid fa-square-check"></i>
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-square-check"></i>
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-square-check"></i>
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-square-check"></i>
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-square-check"></i>
+                            <div>
+                                <h3>TypeScript</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-square-check"></i>
+                            <div>
+                                <h3>React</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="detail-containers">
+                    <h2 class="experience-sub-title">Backend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <i class="fa-solid fa-square-check"></i>
+                            <div>
+                                <h3>PostgreSQL</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-square-check"></i>
+                            <div>
+                                <h3>Node.JS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-square-check"></i>
+                            <div>
+                                <h3>Express.JS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-square-check"></i>
+                            <div>
+                                <h3>Git</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <nav>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <p>Copyright &#169; 2025 Bryan Anderson. All Rights Reserved.</p>
+</footer>
+</html>
